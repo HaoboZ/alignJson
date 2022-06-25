@@ -1,7 +1,7 @@
 {
 	"name"           : "alignjson",
 	"description"    : "Formats and aligns json whatever way you want",
-	"version"        : "1.1.0",
+	"version"        : "1.1.1",
 	"main"           : "cli.ts",
 	"repository"     : {
 		"type": "git",

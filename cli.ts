@@ -4,10 +4,12 @@ import fs from 'fs';
 import glob from 'glob';
 import os from 'os';
 import neatJSON from './neatJSON';
+import packagejson from './package.json';
 
 program
-	.name( 'align JSON' )
-	.description( 'Aligns and formats json files' )
+	.name( packagejson.name )
+	.description( packagejson.description )
+	.version( packagejson.version )
 	.argument( '<file>', 'file[s] to format' )
 	.option( '-w, --wrap <number | boolean>', 'Maximum line width before wrapping. Use false to never wrap, true to always wrap', '80' )
 	.option( '-i, --indent <string>', 'Whitespace used to indent each level when wrapping', '\t' )
