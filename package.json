@@ -1,13 +1,24 @@
 {
-	"name"           : "align-json",
-	"version"        : "1.0.0",
-	"main"           : "build/index.js",
+	"name"           : "alignjson",
+	"description"    : "Formats and aligns json whatever way you want",
+	"version"        : "1.1.0",
+	"main"           : "cli.ts",
+	"repository"     : {
+		"type": "git",
+		"url" : "https://github.com/HaoboZ/alignJson.git"
+	},
+	"keywords"       : [
+		"json",
+		"format",
+		"align"
+	],
 	"scripts"        : {
 		"build": "tsc"
 	},
-	"bin"            : {
-		"alignJson": "build/index.js"
-	},
+	"files"          : [
+		"build"
+	],
+	"bin"            : "build/cli.js",
 	"packageManager" : "yarn@3.2.1",
 	"dependencies"   : {
 		"commander": "^9.3.0",
