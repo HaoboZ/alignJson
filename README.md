@@ -4,11 +4,26 @@ A completely configurable json aligning tool.
 
 ## Installation
 
-`npm install -g alignjson` or `npx alignjson`
+`npm install alignjson` or `npx alignjson`
 
 ## Quick Start
 
-`alignjson file.json`
+`npx alignjson file.json`
+
+```javascript
+import alignJson from 'alignjson';
+
+console.log( alignJson( { a: [ 1, 2, 3 ] }, { wrap: true } ) );
+/*
+{
+	"a": [
+		1,
+		2,
+		3
+	]
+}
+ */
+```
 
 ## Options
 
