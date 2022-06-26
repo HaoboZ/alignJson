@@ -2,21 +2,19 @@
 	"compilerOptions": {
 		"target"           : "esnext",
 		"module"           : "commonjs",
+		"declaration"      : true,
 		"lib"              : [
 			"ESNext"
 		],
 		"allowJs"          : true,
 		"outDir"           : "build",
 		"skipLibCheck"     : true,
-		"rootDir"          : ".",
+		"rootDir"          : "src",
 		"strict"           : false,
 		"noImplicitAny"    : false,
 		"esModuleInterop"  : true,
 		"resolveJsonModule": true,
 		"moduleResolution" : "node"
 	},
-	"include"        : [
-		"**/*.ts",
-		"**/*.tsx"
-	]
+	"include"        : [ "src" ]
 }

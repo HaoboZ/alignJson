@@ -1,6 +1,6 @@
 import os from 'os';
 
-type Options = {
+export type AlignJsonOptions = {
 	// Maximum line width before wrapping. Use false to never wrap, true to always wrap. default: 80
 	wrap?: boolean | number,
 	// Whitespace used to indent each level when wrapping. default: "\t" (tab)
@@ -42,7 +42,7 @@ type Options = {
 	afterColon?: number,
 };
 
-export default function neatJSON( value, opts: Options = {} ) {
+export default function alignJson( value, opts: AlignJsonOptions = {} ) {
 	if ( !( 'wrap' in opts ) ) opts.wrap = 80;
 	if ( opts.wrap === true ) opts.wrap = -1;
 	if ( !( 'indent' in opts ) ) opts.indent = '\t';
