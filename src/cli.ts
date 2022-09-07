@@ -49,6 +49,9 @@ for ( const search of program.args ) {
 	
 	for ( const filename of files ) {
 		const file = fs.readFileSync( filename, { encoding: 'utf8' } ).toString();
-		fs.writeFileSync( filename, alignJson( JSON.parse( file ), options ) );
+		try {
+			fs.writeFileSync( filename, alignJson( JSON.parse( file ), options ) );
+		} catch {
+		}
 	}
 }
