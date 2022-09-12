@@ -45,11 +45,11 @@ program.parse();
 const options = program.opts();
 
 for ( const search of program.args ) {
-	const files = glob.sync( search, { dot: true } );
+	const files = glob.sync( search, { dot: true, ignore: '**/node_modules/**/*' } );
 	
 	for ( const filename of files ) {
-		const file = fs.readFileSync( filename, { encoding: 'utf8' } ).toString();
 		try {
+			const file = fs.readFileSync( filename, { encoding: 'utf8' } ).toString();
 			fs.writeFileSync( filename, alignJson( JSON.parse( file ), options ) );
 		} catch {
 		}
