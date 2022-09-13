@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 import { program } from 'commander';
 import fs from 'fs';
-import glob from 'glob';
+import glob from 'fast-glob';
 import os from 'os';
 import alignJson from './alignJson';
 import specialChars from './specialChars';
@@ -45,7 +45,7 @@ program.parse();
 const options = program.opts();
 
 for ( const search of program.args ) {
-	const files = glob.sync( search, { dot: true, ignore: '**/node_modules/**/*' } );
+	const files = glob.sync( search, { dot: true, ignore: [ '**/node_modules/**' ] } );
 	
 	for ( const filename of files ) {
 		try {

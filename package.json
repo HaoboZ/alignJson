@@ -1,7 +1,7 @@
 {
 	"name"           : "alignjson",
 	"description"    : "Formats and aligns json whatever way you want",
-	"version"        : "1.3.1",
+	"version"        : "1.4.0",
 	"repository"     : {
 		"type": "git",
 		"url" : "https://github.com/HaoboZ/alignJson.git"
@@ -23,7 +23,7 @@
 	"packageManager" : "yarn@3.2.3",
 	"dependencies"   : {
 		"commander": "^9.4.0",
-		"glob"     : "^8.0.3"
+		"fast-glob": "^3.2.12"
 	},
 	"devDependencies": {
 		"@types/glob": "^8.0.0",
